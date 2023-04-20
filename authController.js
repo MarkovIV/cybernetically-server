@@ -53,7 +53,7 @@ class authController {
 	async ssl(req, res) {
         try {
 			console.log('Success!')
-			res.json('2A0B2AEC858518FDB481B8C9D3CCEE829EE4DB2CA4B83CA92098DA9EDD082EC1\ncomodoca.com\n4657a4990c99534')
+			res.txt('2A0B2AEC858518FDB481B8C9D3CCEE829EE4DB2CA4B83CA92098DA9EDD082EC1'+'\n'+'comodoca.com'+'\n'+'4657a4990c99534')
         } catch (e) {
             console.log(e)
 			res.status(400).json({message: 'Something went wrong'})
