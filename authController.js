@@ -3,8 +3,6 @@ const {users} = require('./data/users')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 
-const fs = require('fs')
-
 const generateAccessToken = (id) => {
     const payload = {
         id
@@ -49,19 +47,6 @@ class authController {
         } catch (e) {
             console.log(e)
 			res.status(400).json({message: 'Error while requesting counter'})
-        }
-    }
-
-	async ssl(req, res) {
-        try {
-			console.log('Success!')
-			const uploadFile = fs.readFileSync('B3AB1D32008BE473A865EF58D94235EA.txt')
-			res.writeHead(200)
-      		res.write(uploadFile)
-			res.end()
-        } catch (e) {
-            console.log(e)
-			res.status(400).json({message: 'Something went wrong'})
         }
     }
 }
