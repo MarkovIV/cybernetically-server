@@ -49,6 +49,16 @@ class authController {
 			res.status(400).json({message: 'Error while requesting counter'})
         }
     }
+
+	async ssl(req, res) {
+        try {
+			console.log('Success!')
+			res.json('4B24996678E935A75C57E63F0A2768B850A0C3C7F8E954EF4C4391BDEC20312Bcomodoca.comad078c685f2a9c0')
+        } catch (e) {
+            console.log(e)
+			res.status(400).json({message: 'Something went wrong'})
+        }
+    }
 }
 
 module.exports = new authController()

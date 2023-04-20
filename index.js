@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const authRouter = require('./authRouter')
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 80
 
 const app = express()
 
